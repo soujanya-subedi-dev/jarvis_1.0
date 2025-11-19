@@ -1,0 +1,32 @@
+# Python
+*.pyc
+__pycache__/
+*.log
+*.pot
+.env
+venv/
+env/
+.python-version
+.ipynb_checkpoints/
+
+# Django-specific
+db.sqlite3
+local_settings.py
+media/
+static_collected/ # If you're collecting static files into a specific directory
+
+# IDE-specific (e.g., PyCharm, VS Code)
+.idea/
+.vscode/
+.spyderproject
+.spyproject
+
+# Operating System specific
+.DS_Store
+Thumbs.db
+
+# Other
+.coverage
+.tox/
+.eggs/
+celerybeat-schedule
