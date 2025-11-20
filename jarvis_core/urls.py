@@ -27,5 +27,6 @@ urlpatterns = [
 
     path('api/tasks/', include('tasks.urls')),
     path('api/notes/', include('notes.urls')),
+    path('api/events/', include('events.urls')),
 
 ]
