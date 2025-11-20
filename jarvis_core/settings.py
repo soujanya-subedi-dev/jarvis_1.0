@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
-    'apps.assistant',
+    'tasks',
+    'notes',
 ]
 
 MIDDLEWARE = [
@@ -56,6 +57,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'jarvis_core.urls'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
 
 TEMPLATES = [
     {
