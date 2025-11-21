@@ -13,6 +13,7 @@ env/
 db.sqlite3
 local_settings.py
 media/
+static/
 static_collected/ # If you're collecting static files into a specific directory
 
 # IDE-specific (e.g., PyCharm, VS Code)
