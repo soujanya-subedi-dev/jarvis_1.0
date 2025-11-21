@@ -42,9 +42,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
+    'accounts',
     'tasks',
     'notes',
     'events',
+    'contacts',
 ]
 
 MIDDLEWARE = [
@@ -104,6 +106,9 @@ DATABASES = {
     }
 }
 
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'jarvis@example.com'
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
