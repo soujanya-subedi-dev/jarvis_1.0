@@ -50,6 +50,9 @@ INSTALLED_APPS = [
     'contacts',
     'calendarapp',
     'reminders',
+    'filemanager',
+    'dashboard',
+
 ]
 
 MIDDLEWARE = [

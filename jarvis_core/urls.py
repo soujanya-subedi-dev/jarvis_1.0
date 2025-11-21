@@ -20,12 +20,18 @@ from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
+
+from django.conf import settings
+from django.conf.urls.static import static
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/auth/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/auth/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 
     path('api/accounts/', include('accounts.urls')),
+    path('api/dashboard/', include('dashboard.urls')),
 
     path('api/tasks/', include('tasks.urls')),
     path('api/notes/', include('notes.urls')),
@@ -33,8 +39,7 @@ urlpatterns = [
     path('api/contacts/', include('contacts.urls')),
     path('api/calendar/', include('calendarapp.urls')),
     path('api/reminders/', include('reminders.urls')),
+    path('api/files/', include('filemanager.urls')),
 
 
-    
-
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
