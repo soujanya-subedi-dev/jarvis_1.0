@@ -31,6 +31,10 @@ urlpatterns = [
     path('api/notes/', include('notes.urls')),
     path('api/events/', include('events.urls')),
     path('api/contacts/', include('contacts.urls')),
+    path('api/calendar/', include('calendarapp.urls')),
+    path('api/reminders/', include('reminders.urls')),
+
+
     
 
 ]
